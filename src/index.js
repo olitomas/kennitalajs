@@ -13,7 +13,8 @@ class Kennitala{
                 type: this.type,
                 age: age.years,
                 msAge: age.msAge,
-                birthdayToday: age.birthdayToday
+                birthdayToday: age.birthdayToday,
+                kt: parseInt(kt, 10)
             }
         }else{
             return{

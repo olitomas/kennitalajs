@@ -2,6 +2,18 @@
 
 Validation for an Icelandic kennitala (social security number)
 
+### Getting started:
+```html
+<script type="text/javascript" src="https://npmcdn.com/kennitalajs@latest/kennitala.min.js"></script>
+
+<script type="text/javascript">
+    var test = new Kennitala(2202863399);
+
+    console.log(test);
+</script>
+
+```
+
 ### Accepted types:
 
 ```javascript

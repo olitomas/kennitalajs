@@ -1,6 +1,6 @@
 {
   "name": "kennitalajs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Validation for an Icelandic kennitala (social security number)",
   "main": "kennitala.min.js",
   "scripts": {

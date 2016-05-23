@@ -1425,7 +1425,8 @@ var Kennitala = function () {
         } else {
             return {
                 valid: validate.valid,
-                reason: validate.reason
+                reason: validate.reason,
+                errorCode: validate.errorCode
             };
         }
     }
@@ -1571,5 +1572,5 @@ var Kennitala = function () {
 
 global.Kennitala = Kennitala;
 
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_a73d18b.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_2ea3dd8e.js","/")
 },{"buffer":2,"pBGvAp":4}]},{},[5])

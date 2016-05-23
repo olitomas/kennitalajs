@@ -19,7 +19,8 @@ class Kennitala{
         }else{
             return{
                 valid: validate.valid,
-                reason: validate.reason
+                reason: validate.reason,
+                errorCode: validate.errorCode
             }
         }
     }

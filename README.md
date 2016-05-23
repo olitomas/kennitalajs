@@ -3,6 +3,9 @@
 Validation for an Icelandic kennitala (social security number)
 
 ### Getting started:
+
+#### Install with npm (npm install kennitalajs) or:
+
 ```html
 <script type="text/javascript" src="https://npmcdn.com/kennitalajs@latest/kennitala.min.js"></script>
 

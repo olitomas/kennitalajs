@@ -1,0 +1,45 @@
+{
+  "name": "kennitalajs",
+  "version": "1.0.1",
+  "description": "Validation for an Icelandic kennitala (social security number)",
+  "main": "kennitala.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olitomas/kennitalajs.git"
+  },
+  "keywords": [
+    "kennitala",
+    "kennitalajs"
+  ],
+  "author": "Óli Tómas Freysson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olitomas/kennitalajs/issues"
+  },
+  "homepage": "https://github.com/olitomas/kennitalajs#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-minify": "0.0.11",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  }
+}

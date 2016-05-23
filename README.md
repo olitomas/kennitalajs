@@ -41,12 +41,12 @@ var kennitala = new Kennitala('521110-0660');
 };
 ```
 
-### When trying to validate invalid kennitala
+### Invalid date examples
 
 We can recieve 5 possible reasons for when the kennitala is not valid:
 
+#### Kennitala can be too short
 ```javascript
-// The kennitala can be too short
 var kennitala = new Kennitala(22028633);
 
 //kennitala returns:
@@ -57,13 +57,11 @@ var kennitala = new Kennitala(22028633);
 };
 ```
 
-When there is something wrong with digits 1 and 2
+#### Something is wrong with digits 1 and 2
 
-**xx**xxxxxxxx:
+**XX**xxxxxxxx:
 ```javascript
-// Birthdate is out of range (digits 1 and 2)
-
-var kennitala = new Kennitala('521110-066');
+var kennitala = new Kennitala(3202863399);
 
 kennitala returns:
 {
@@ -73,11 +71,10 @@ kennitala returns:
 };
 ```
 
-When there is something wrong with digits 3 and 4
-xx**xx**xxxxxx
+#### Something is wrong with digits 3 and 4
+xx**XX**xxxxxx
 ```javascript
-// Month digits are out of range (digits 3 and 4)
-var kennitala = new Kennitala('521110-066');
+var kennitala = new Kennitala(2222863399);
 //kennitala returns:
 {
     valid: false,
@@ -88,19 +85,18 @@ var kennitala = new Kennitala('521110-066');
 
 ----------
 
-xxxx**xxx**xxx
+xxxx**XXX**xxx
 Digits 5,6,7 and 8 can be anything so we cant validate them
 
 ----------
 
 
-When there is something wrong with digit number 9
+#### Something is wrong with digit number 9
 
-22028633**9**9
+xxxxxxxx**X**x
 
 ```javascript
-// 
-var kennitala = new Kennitala('521110-0660');
+var kennitala = new Kennitala(2202863349);
 //kennitala returns:
 {
   valid: false,
@@ -110,9 +106,9 @@ var kennitala = new Kennitala('521110-0660');
 
 ```
 
-When there is something wrong with digit number 10
+#### Something is wrong with digit number 10
 
-xxxxxxxxx**x**
+xxxxxxxxx**X**
 
 ```javascript
 // 

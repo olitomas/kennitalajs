@@ -1433,8 +1433,6 @@ var Kennitala = function () {
         key: 'existanceInYears',
         value: function existanceInYears(birthday) {
             var today = new Date();
-            console.log(today);
-            console.log(birthday);
             var age = today.getUTCFullYear() - birthday.getUTCFullYear();
             var m = today.getUTCMonth() - birthday.getUTCMonth();
             if (m < 0 || m === 0 && today.getUTCDate() < birthday.getUTCDate()) {
@@ -1498,8 +1496,6 @@ var Kennitala = function () {
             var dd = parseInt(list[0] + list[1], 10);
             if (!(dd > 0 && dd < 72) || dd > 31 && dd < 42) return { valid: false, reason: 'Birthdate is out of range (digits 1 and 2)' };
 
-            console.log('check2');
-
             // Validating digits 3 and 4
             var mm = parseInt(list[2] + list[3], 10);
             if (!(mm > 0 && mm < 13)) return { valid: false, reason: 'Month digits are out of range (digits 3 and 4)' };
@@ -1543,7 +1539,6 @@ var Kennitala = function () {
             var sum = list[0] * 3 + list[1] * 2 + list[2] * 7 + list[3] * 6 + list[4] * 5 + list[5] * 4 + radtalaOne * 3 + radtalaTwo * 2;
 
             var vartala = 11 - sum % 11;
-            console.log(vartala);
             return vartala;
         }
     }, {
@@ -1575,5 +1570,5 @@ var Kennitala = function () {
 
 global.Kennitala = Kennitala;
 
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_7c99bd3d.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_c377da55.js","/")
 },{"buffer":2,"pBGvAp":4}]},{},[5])

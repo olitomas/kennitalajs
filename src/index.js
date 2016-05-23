@@ -77,17 +77,17 @@ class Kennitala{
     }
 
     isValid(kt) {
-        if(kt.length !== 10) return {valid: false, reason: 'Kennitala is too short'};
+        if(kt.length !== 10) return {valid: false, reason: 'Kennitala is too short', errorCode: 1};
 
         const list = kt.split('');
 
         // Validating digits 1 and 2
         const dd = parseInt(list[0] + list[1], 10);
-        if(!(dd > 0 && dd < 72) || (dd > 31 && dd < 42)) return {valid: false, reason: 'Birthdate is out of range (digits 1 and 2)'};
+        if(!(dd > 0 && dd < 72) || (dd > 31 && dd < 42)) return {valid: false, reason: 'Birthdate is out of range (digits 1 and 2)', errorCode: 2};
 
         // Validating digits 3 and 4
         const mm = parseInt(list[2] + list[3], 10);
-        if(!(mm > 0 && mm < 13)) return {valid: false, reason: 'Month digits are out of range (digits 3 and 4)'};
+        if(!(mm > 0 && mm < 13)) return {valid: false, reason: 'Month digits are out of range (digits 3 and 4)', errorCode: 3};
 
         //Digits 5,6,7 and 8 can be anything so we cant validate them
 
@@ -102,11 +102,11 @@ class Kennitala{
         });
 
         //Validating digit 9
-        if(this.validateNine(list) === false) return {valid: false, reason: 'Digit 9 is not valid. Read about "Níundi stafurinn" here: https://is.wikipedia.org/wiki/Kennitala'};
+        if(this.validateNine(list) === false) return {valid: false, reason: 'Digit 9 is not valid. Read about "Níundi stafurinn" here: https://is.wikipedia.org/wiki/Kennitala', errorCode: 4};
 
         //Validating digit 10
         const lastDigit = parseInt(list[9], 10);
-        if(!(lastDigit === 0 || lastDigit === 8 || lastDigit ===9)) return {valid: false, reason: 'Century digit out of range (digit 10)'};
+        if(!(lastDigit === 0 || lastDigit === 8 || lastDigit ===9)) return {valid: false, reason: 'Century digit out of range (digit 10)', errorCode: 5};
 
         return {valid: true};
     }

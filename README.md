@@ -33,12 +33,12 @@ var type3 = '220286-3399' //String with the widely used hyphen
 var kennitala = new Kennitala(2202863399);
 //kennitala returns:
 {
-    valid: true, <----------- Tells us if the kennitala is valid
-    type: 'person', <-------- Tells us if kennitala belongs to a person or a company
-    age: 22, <--------------- The person/company age in years
-    msAge: 694383374545, <--- Time in milliseconds since birth/company was founded
-    birthdayToday: true, <--- Tells us if the person/company has a birthday today
-    kt: 2202863399 <--------- The kennitala as a integer
+    valid: true, //<----------- Tells us if the kennitala is valid
+    type: 'person', //<-------- Tells us if kennitala belongs to a person or a company
+    age: 22, //<--------------- The person/company age in years
+    msAge: 694383374545, //<--- Time in milliseconds since birth/company was founded
+    birthdayToday: true, //<--- Tells us if the person/company has a birthday today
+    kt: 2202863399 //<--------- The kennitala as a integer
 };
 ```
 

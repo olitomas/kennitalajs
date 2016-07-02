@@ -1,6 +1,6 @@
 class Kennitala{
     constructor(kennitala) {
-        let kt = kennitala.toString();
+        let kt = kennitala ? kennitala.toString() : '';
         kt = kt.replace(/-/g, '');
         const validate = this.isValid(kt);
 

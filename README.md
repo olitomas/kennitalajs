@@ -26,6 +26,8 @@ var type1 = 2202863399; //Integer
 var type2 = '2202863399' //String
 var type3 = '220286-3399' //String with the widely used hyphen
 
+// I do however reccommend storing the kennitala in a string format since integers cant start with a zero
+
 ```
 
 ### Validating a persons kennitala

@@ -2,6 +2,7 @@ class Kennitala{
     constructor(kennitala) {
         let kt = kennitala ? kennitala.toString() : '';
         kt = kt.replace(/-/g, '');
+        if(kt.length === 9) kt = '0' + kt;
         const validate = this.isValid(kt);
 
         if(validate.valid){
@@ -14,7 +15,7 @@ class Kennitala{
                 age: age.years,
                 msAge: age.msAge,
                 birthdayToday: age.birthdayToday,
-                kt: parseInt(kt, 10)
+                kt: kt
             }
         }else{
             return{

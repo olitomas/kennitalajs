@@ -86,7 +86,7 @@ class Kennitala{
 
         // Validating digits 1 and 2
         const dd = parseInt(list[0] + list[1], 10);
-        if(!(dd > 0 && dd < 72) || (dd > 31 && dd < 42)) return {valid: false, reason: 'Birthdate is out of range (digits 1 and 2)', errorCode: 2};
+        if(!(dd > 0 && dd < 72) || (dd > 31 && dd < 41)) return {valid: false, reason: 'Birthdate is out of range (digits 1 and 2)', errorCode: 2};
 
         // Validating digits 3 and 4
         const mm = parseInt(list[2] + list[3], 10);

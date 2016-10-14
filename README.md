@@ -7,7 +7,7 @@ Validation for an Icelandic kennitala (social security number)
 #### Install with npm (npm install kennitalajs) or:
 
 ```html
-<script type="text/javascript" src="https://npmcdn.com/kennitalajs@latest/kennitala.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/kennitalajs@latest/kennitala.min.js"></script>
 
 <script type="text/javascript">
     var test = new Kennitala(2202863399);

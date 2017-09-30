@@ -157,7 +157,3 @@ class Kennitala{
 }
 
 global.Kennitala = Kennitala;
-
-global.kennital = function(kt) {
-    return new Kennitala(kt);
-};

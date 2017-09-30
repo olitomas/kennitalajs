@@ -15,14 +15,15 @@ class Kennitala{
                 age: age.years,
                 msAge: age.msAge,
                 birthdayToday: age.birthdayToday,
-                kt: kt
-            }
+                kt: kt,
+                formattedKt: kt.substr(0,6) + '-' + kt.substr(6,10)
+            };
         }else{
             return{
                 valid: validate.valid,
                 reason: validate.reason,
                 errorCode: validate.errorCode
-            }
+            };
         }
     }
 

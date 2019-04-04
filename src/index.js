@@ -139,8 +139,9 @@ class Kennitala{
         let vartala = this.calculateVartala(list);
 
         if(vartala === 10){
+            let v = 10;
             while (v === 10) {
-                const calcAgain = calculateVartala(list, true);
+                const calcAgain = this.calculateVartala(list, true);
                 if(calcAgain !== 10) vartala = calcAgain;
                 v = calcAgain;
             }

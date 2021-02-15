@@ -8,24 +8,30 @@ const onError = function (err) {
     console.log(err);
 };
 
-gulp.task('default', ['buildFile', 'buildMinified']);
-gulp.task('build', ['buildFile', 'buildMinified']);
-
-gulp.task('buildFile', () => {
-    gulp.src('src/index.js')
-        .pipe(browserify({
-          insertGlobals : true
-        }))
+const buildFile = (done) => {
+    gulp.src('./src/index.js')
+        .pipe(
+            browserify({
+                insertGlobals: true,
+            }),
+        )
         .pipe(rename('kennitala.js'))
-        .pipe(gulp.dest(''));
-});
+        .pipe(gulp.dest('./'));
+    done();
+};
 
-gulp.task('buildMinified', () => {
-    gulp.src('src/index.js')
-        .pipe(browserify({
-          insertGlobals : true
-        }))
+const buildMinified = (done) => {
+    gulp.src('./src/index.js')
+        .pipe(
+            browserify({
+                insertGlobals: true,
+            }),
+        )
         .pipe(uglify())
         .pipe(rename('kennitala.min.js'))
-        .pipe(gulp.dest(''));
-});
+        .pipe(gulp.dest('./'));
+    done();
+};
+
+gulp.task('default', gulp.parallel(buildMinified, buildFile));
+gulp.task('build', gulp.parallel(buildMinified, buildFile));

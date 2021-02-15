@@ -14,23 +14,21 @@ Validation for an Icelandic kennitala (social security number)
 
     console.log(test);
 </script>
-
 ```
 
 ### Accepted types:
 
 ```javascript
-
 //Kennitalajs accepts all types of possible kt formats
 var type1 = 2202863399; //Integer
-var type2 = '2202863399' //String
-var type3 = '220286-3399' //String with the widely used hyphen
+var type2 = '2202863399'; //String
+var type3 = '220286-3399'; //String with the widely used hyphen
 
 // I do however reccommend storing the kennitala in a string format since integers cant start with a zero
-
 ```
 
 ### Validating a persons kennitala
+
 ```javascript
 var kennitala = new Kennitala(2202863399);
 //kennitala returns:
@@ -45,6 +43,7 @@ var kennitala = new Kennitala(2202863399);
 ```
 
 ### Validating a company kennitala
+
 ```javascript
 var kennitala = new Kennitala('521110-0660');
 //kennitala returns:
@@ -58,11 +57,23 @@ var kennitala = new Kennitala('521110-0660');
 };
 ```
 
+### Create a fake (but valid) kennitala
+
+```javascript
+var kennitala = new Kennitala('fake');
+//kennitala returns:
+{
+    valid: true,
+    ......
+};
+```
+
 ### Invalid date examples
 
 We can recieve 5 possible reasons for when the kennitala is not valid:
 
 #### Kennitala can be too short
+
 ```javascript
 var kennitala = new Kennitala(22028633);
 
@@ -77,6 +88,7 @@ var kennitala = new Kennitala(22028633);
 #### Something is wrong with digits 1 and 2
 
 **XX**xxxxxxxx:
+
 ```javascript
 var kennitala = new Kennitala(3202863399);
 
@@ -89,7 +101,9 @@ kennitala returns:
 ```
 
 #### Something is wrong with digits 3 and 4
+
 xx**XX**xxxxxx
+
 ```javascript
 var kennitala = new Kennitala(2222863399);
 //kennitala returns:
@@ -100,13 +114,12 @@ var kennitala = new Kennitala(2222863399);
 };
 ```
 
-----------
+---
 
 xxxx**XXX**xxx
 Digits 5,6,7 and 8 can be anything so we cant validate them
 
-----------
-
+---
 
 #### Something is wrong with digit number 9
 
@@ -128,7 +141,7 @@ var kennitala = new Kennitala(2202863349);
 xxxxxxxxx**X**
 
 ```javascript
-// 
+//
 var kennitala = new Kennitala(2202863393);
 
 //kennitala returns:
